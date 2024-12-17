@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+html, *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/* タイピングゲーム全体 */
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 6em;
+    text-align: center;
+    background-color: #1a1a2e;
+    color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ゲームの残り秒数が表示されるタイマーの領域 */
+.count {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffcc00;
+    margin: 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* テキストが表示される領域 */
+.wrap {
+    margin-top: 20px;
+    padding: 50px 30px;
+    background-color: #29293d;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 10px;
+    max-width: 80%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    word-wrap: break-word;
+}
+
+/* タイプ数表示エリア */
+.type-count {
+    font-weight: bold;
+    color:  #aaa;
+    font-size: 0.8em;
+    text-align: center; /* 中央揃えに調整 */
+}
+
+/* 正しくタイプされた場合のテキスト */
+.typed {
+    color: #2ecc71;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* ミスタイプの場合の背景 */
+.mistyped {
+    background-color: #e74c3c; 
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+/* スタートボタンのスタイル */
+button#start {
+    background-color: #3498db; /* 鮮やかな青 */
+    color: white;
+    font-size: 0.5em;
+    font-weight: bold;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* ボタンにもシャドウを追加 */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* ホバー時のスムーズな変化 */
+}
+
+button#start:hover {
+    background-color: #1d78c1; /* ホバー時に濃い青 */
+    transform: scale(1.05); /* 少し拡大 */
+}
+
+button#start:active {
+    transform: scale(0.95); /* 押したときに縮小 */
+}
